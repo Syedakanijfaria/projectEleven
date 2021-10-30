@@ -5,7 +5,7 @@ const TourPlans = () => {
     const [TourPlans, setTourPlans] = useState([])
 
     useEffect(() =>
-        fetch('/productTourPlans.json')
+        fetch('http://localhost:5000/productTourPlans')
             .then(res => res.json())
             .then(data => setTourPlans(data))
         , [])

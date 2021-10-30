@@ -30,7 +30,6 @@ const Header = () => {
                             <li className="nav-item m-2 p-2">
                                 <NavLink className="text-decoration-none" to="/offers">Offers</NavLink>
                             </li>
-                            <p>Name: {user?.displayName}</p>
                             {
 
                                 user?.email ?
@@ -40,6 +39,7 @@ const Header = () => {
                                         <NavLink className="text-decoration-none" to="/login">Login</NavLink>
                                     </li>
                             }
+                            <p className="m-2 p-2">Name: {user?.displayName}</p>
                         </ul>
                     </div>
                 </div>

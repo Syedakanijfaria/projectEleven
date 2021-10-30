@@ -8,7 +8,7 @@ const Details = () => {
 
 
     useEffect(() =>
-        fetch("/productTourPlans.json")
+        fetch("http://localhost:5000/productTourPlans")
             .then(res => res.json())
             .then(data => setDetails(data))
         , [])
