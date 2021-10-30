@@ -7,7 +7,10 @@ import Offers from './Components/Offers/Offers.js';
 import Login from './Components/Login/Login.js';
 import NotFound from './Components/NotFound/NotFound.js';
 import Footer from './Components/Footer/Footer.js';
-//import AuthProvider from './Context/AuthProvider.js';
+import AuthProvider from './Context/AuthProvider.js';
+import Register from './Components/Register/Register.js';
+import Details from './Components/Details/Details.js';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute.js';
 // import Trainer from './Components/Trainer/Trainer.js';
 // import Package from './Components/Package/Package.js';
 // import Details from './Components/Details/Details/Details.js';
@@ -18,33 +21,35 @@ import Footer from './Components/Footer/Footer.js';
 function App() {
   return (
     <div>
-
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          {/* <PrivateRoute path="/details/:serviceId">
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <PrivateRoute exact path="/details/:id">
               <Details></Details>
-            </PrivateRoute> */}
-          <Route path="/offers">
-            <Offers></Offers>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
-
+            </PrivateRoute>
+            <Route path="/offers">
+              <Offers></Offers>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

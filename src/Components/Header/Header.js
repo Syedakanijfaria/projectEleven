@@ -13,9 +13,9 @@ const Header = () => {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a className="navbar-brand" href="#">
-                        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top" />
-                        Extreme Traveler</a>
+                    <p className="navbar-brand">
+                        <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
+                        Extreme Traveler</p>
                     <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
                             <li className="nav-item m-2 p-2 text-decoration-none">
