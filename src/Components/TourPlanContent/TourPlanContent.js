@@ -2,13 +2,12 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const TourPlanContent = (props) => {
-    const { key, image, name, price, description } = props.service || {}
-
+    const { _id, image, name, price, description } = props.service || {}
 
     const history = useHistory()
 
-    const handleDetails = (key) => {
-        const uri = `/details/${key}`
+    const handleDetails = (_id) => {
+        const uri = `/details/${_id}`
         history.push(uri)
     }
 
@@ -21,7 +20,7 @@ const TourPlanContent = (props) => {
                     <p className="card-text">{description}</p>
                     {price}
                 </div>
-                <button onClick={() => handleDetails(key)} className="btn btn-primary">See Details</button>
+                <button onClick={() => handleDetails(_id)} className="btn btn-primary">See Details</button>
             </div>
         </div>
     );

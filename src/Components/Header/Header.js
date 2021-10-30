@@ -31,7 +31,6 @@ const Header = () => {
                                 <NavLink className="text-decoration-none" to="/offers">Offers</NavLink>
                             </li>
                             {
-
                                 user?.email ?
                                     <button onClick={logOut}> Sign Out</button>
                                     :
