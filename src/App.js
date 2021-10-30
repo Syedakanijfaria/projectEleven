@@ -9,8 +9,9 @@ import NotFound from './Components/NotFound/NotFound.js';
 import Footer from './Components/Footer/Footer.js';
 import AuthProvider from './Context/AuthProvider.js';
 import Register from './Components/Register/Register.js';
-import Details from './Components/Details/Details.js';
+
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.js';
+import PlaceOrder from './Components/PlaceOrder/PlaceOrder.js';
 // import Trainer from './Components/Trainer/Trainer.js';
 // import Package from './Components/Package/Package.js';
 // import Details from './Components/Details/Details/Details.js';
@@ -31,8 +32,8 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute exact path="/details/:id">
-              <Details></Details>
+            <PrivateRoute exact path="/placeOrder/:id">
+              <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <Route path="/offers">
               <Offers></Offers>

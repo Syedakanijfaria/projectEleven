@@ -32,7 +32,7 @@ const Header = () => {
                             </li>
                             {
                                 user?.email ?
-                                    <button onClick={logOut}> Sign Out</button>
+                                    <button onClick={logOut}> Log Out</button>
                                     :
                                     <li className="nav-item m-2 p-2">
                                         <NavLink className="text-decoration-none" to="/login">Login</NavLink>
