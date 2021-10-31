@@ -1,4 +1,4 @@
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { useEffect, useState } from "react";
 import initializeAuthentication from '../Firebase/firebase.initialize.js';
 
@@ -14,8 +14,9 @@ const useFirebase = () => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            // console.log(user);
+            console.log(user);
             if (user) {
+
                 setUser(user)
             } else {
                 setUser({})
@@ -25,13 +26,40 @@ const useFirebase = () => {
         return () => unsubscribe()
     }, [auth])
 
+
     const signInWithGoogle = () => {
         return signInWithPopup(auth, googleProvider)
 
     }
 
-    const logOut = () => {
 
+    const createAccountWithGoogle = (email, password) => {
+
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+
+    const loginWithEmailAndPassword = (email, password) => {
+        return signInWithEmailAndPassword(auth, email, password)
+    }
+
+
+    const updateName = (name) => {
+        updateProfile(auth.currentUser, {
+            displayName: name
+        }).then(() => {
+            const newUser = { ...user, displayName: name } // recommend
+            setUser(newUser)
+
+            // ...
+        }).catch((error) => {
+            // An error occurred
+            // ...
+        });
+    }
+
+    const logOut = () => {
+        console.log("logouttttt");
         signOut(auth).then(() => {
             setUser({})
         }).catch((error) => {
@@ -42,9 +70,12 @@ const useFirebase = () => {
     return {
         user, setUser,
         signInWithGoogle,
+        createAccountWithGoogle,
+        loginWithEmailAndPassword,
         isLoading,
         setIsLoading,
-        logOut
+        logOut,
+        updateName
     }
 }
 

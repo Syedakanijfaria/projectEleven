@@ -36,8 +36,6 @@ const PlaceOrder = () => {
                     reset();
                 }
             })
-        // const uri = `/myOrder/data`;
-        // history.push(uri);
     }
     return (
         <div className="container">

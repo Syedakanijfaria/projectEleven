@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TourPlanContent from '../TourPlanContent/TourPlanContent.js';
-const TourPlans = () => {
 
+const TourPlans = () => {
     const [TourPlans, setTourPlans] = useState([])
 
     useEffect(() =>
@@ -21,5 +21,4 @@ const TourPlans = () => {
         </div>
     );
 };
-
 export default TourPlans;

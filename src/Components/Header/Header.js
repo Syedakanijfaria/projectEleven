@@ -24,7 +24,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item m-2 p-2">
-                                        <NavLink className="text-decoration-none" to="/myOrder/data">My Order</NavLink>
+                                        <NavLink className="text-decoration-none" to="/myOrder">My Order</NavLink>
                                     </li>
                                     :
                                     <li className="nav-item m-2 p-2">
@@ -34,7 +34,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item m-2 p-2">
-                                        <NavLink className="text-decoration-none" to="/myOrder/data">Manage All Order</NavLink>
+                                        <NavLink className="text-decoration-none" to="/ManageAllOrder">Manage All Order</NavLink>
                                     </li>
                                     :
                                     <li className="nav-item m-2 p-2">
@@ -44,7 +44,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item m-2 p-2">
-                                        <NavLink className="text-decoration-none" to="/myOrder/data">Add A New Service</NavLink>
+                                        <NavLink className="text-decoration-none" to="/myOrder">Add A New Service</NavLink>
                                     </li>
                                     :
                                     <li className="nav-item m-2 p-2">

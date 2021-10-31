@@ -2,13 +2,13 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const TourPlanContent = (props) => {
-    const { _id, image, name, price, description } = props.service || {}
+    const { _id, image, name, price, description } = props.service || {};
 
-    const history = useHistory()
+    const history = useHistory();
 
     const handleDetails = (_id) => {
-        const uri = `/placeOrder/${_id}`
-        history.push(uri)
+        const uri = `/placeOrder/${_id}`;
+        history.push(uri);
     }
 
     return (
