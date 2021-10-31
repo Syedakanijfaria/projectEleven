@@ -39,6 +39,7 @@ const Header = () => {
                                     </li>
                             }
                             <p className="m-2 p-2">Name: {user?.displayName}</p>
+                            <p className="m-2 p-2">Name: {user?.email}</p>
                         </ul>
                     </div>
                 </div>
