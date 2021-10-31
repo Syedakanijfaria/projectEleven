@@ -24,7 +24,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item m-2 p-2">
-                                        <NavLink className="text-decoration-none" to="/myOrder">My Order</NavLink>
+                                        <NavLink className="text-decoration-none" to="/myOrder/:user.email">My Order</NavLink>
                                     </li>
                                     :
                                     <li className="nav-item m-2 p-2">
@@ -44,7 +44,7 @@ const Header = () => {
                             {
                                 user?.email ?
                                     <li className="nav-item m-2 p-2">
-                                        <NavLink className="text-decoration-none" to="/myOrder">Add A New Service</NavLink>
+                                        <NavLink className="text-decoration-none" to="/addNewService">Add A New Service</NavLink>
                                     </li>
                                     :
                                     <li className="nav-item m-2 p-2">
