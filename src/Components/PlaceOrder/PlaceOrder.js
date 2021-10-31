@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import useAuth from '../../Hooks/useAuth.js';
 
 const PlaceOrder = () => {
-    const { user } = useAuth();
-    const { displayName, email } = user;
+
     const { id } = useParams()
     const [details, setDetails] = useState([])
     // const [specificDetail, setSpecificDetail] = useState({})
@@ -21,9 +20,14 @@ const PlaceOrder = () => {
     //     }
 
     // }, [details])
+    const { user } = useAuth();
+    const { displayName, email } = user;
     const { register, handleSubmit, reset } = useForm();
+    const history = useHistory();
     const onSubmit = data => {
         console.log(data);
+        const uri = `/myOrder/data`;
+        history.push(uri);
     }
     return (
         <div className="container">
@@ -55,6 +59,9 @@ const PlaceOrder = () => {
                             <p>Price: $<input type="number" {...register("price")} defaultValue={details?.price} /></p><br />
                             <p>Mobile Number: <input type="Mobile number" {...register("Mobile number", { required: true })} placeholder="Mobile number" /></p><br />
                             <input type="submit" value="Book Now" />
+                            {/* <Link to="/myOrder">
+                                <input type="submit" value="Book Now" />
+                            </Link> */}
                         </form>
                     </div>
                 </div>

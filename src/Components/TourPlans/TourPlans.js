@@ -15,7 +15,6 @@ const TourPlans = () => {
             <div className="row g-5">
                 {
                     TourPlans.map((service => <TourPlanContent service={service}>
-
                     </TourPlanContent>))
                 }
             </div>

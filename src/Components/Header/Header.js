@@ -21,15 +21,36 @@ const Header = () => {
                             <li className="nav-item m-2 p-2 text-decoration-none">
                                 <NavLink className="text-decoration-none" to="/home">Home</NavLink>
                             </li>
-                            <li className="nav-item m-2 p-2">
-                                <NavLink className="text-decoration-none" to="/offers">Offers</NavLink>
-                            </li>
-                            <li className="nav-item m-2 p-2">
-                                <NavLink className="text-decoration-none" to="/offers">Offers</NavLink>
-                            </li>
-                            <li className="nav-item m-2 p-2">
-                                <NavLink className="text-decoration-none" to="/offers">Offers</NavLink>
-                            </li>
+                            {
+                                user?.email ?
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/myOrder/data">My Order</NavLink>
+                                    </li>
+                                    :
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/login"></NavLink>
+                                    </li>
+                            }
+                            {
+                                user?.email ?
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/myOrder/data">Manage All Order</NavLink>
+                                    </li>
+                                    :
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/login"></NavLink>
+                                    </li>
+                            }
+                            {
+                                user?.email ?
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/myOrder/data">Add A New Service</NavLink>
+                                    </li>
+                                    :
+                                    <li className="nav-item m-2 p-2">
+                                        <NavLink className="text-decoration-none" to="/login"></NavLink>
+                                    </li>
+                            }
                             {
                                 user?.email ?
                                     <button onClick={logOut}> Log Out</button>
@@ -39,7 +60,6 @@ const Header = () => {
                                     </li>
                             }
                             <p className="m-2 p-2">Name: {user?.displayName}</p>
-                            <p className="m-2 p-2">Name: {user?.email}</p>
                         </ul>
                     </div>
                 </div>
