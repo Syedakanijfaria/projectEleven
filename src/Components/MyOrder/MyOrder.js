@@ -5,7 +5,7 @@ import MyOrderContent from './MyOrderContent/MyOrderContent.js';
 
 const MyOrder = () => {
     const { user } = useAuth();
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useState([]);
     // const [specificDetail, setSpecificDetail] = useState({})
     useEffect(() =>
         fetch(`http://localhost:5000/users/${user.email}`)

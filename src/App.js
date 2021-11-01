@@ -14,6 +14,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute.js';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder.js';
 import MyOrder from './Components/MyOrder/MyOrder.js';
 import ManageAllOrder from './Components/ManageAllOrder/ManageAllOrder.js';
+import AddNewService from './Components/AddNewService/AddNewService.js';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute exact path="/ManageAllOrder">
               <ManageAllOrder></ManageAllOrder>
+            </PrivateRoute>
+            <PrivateRoute exact path="/addNewService">
+              <AddNewService></AddNewService>
             </PrivateRoute>
             <Route path="/offers">
               <Offers></Offers>
