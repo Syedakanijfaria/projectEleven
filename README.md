@@ -1,31 +1,27 @@
-# Getting Started with Create React App
+# Assignment - 11
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Title or Website Name - EXTREME TRAVELER
 
-## Available Scripts
 
-In the project directory, you can run:
+### live site link client :- https: //tourism-website-client.web.app/home
+### code link client: https:- //github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-Syedakanijfaria
 
-### `npm start`
+### live site link server:- https://morning-falls-44195.herokuapp.com/
+### code link server:- https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-Syedakanijfaria
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+* It's based on World Tour Agency.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* We provide different types of tours in different countries.
 
-### `npm run build`
+* We have a MyOrder page that shows you your Tour package order and also you can delete your order.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* We have ManageAllOrder and also AddServices nav option that can only you use when you are logged in.
 
-### `npm run eject`
+* We have the best quality and experienced coach, they always come with you on every tour.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-## Learn More
+* They teach you how you explore those places and experience eventually, even they give your confidence to do different activities and face any trouble in the tour.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+

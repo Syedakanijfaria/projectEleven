@@ -12,7 +12,7 @@ const TourPlans = () => {
     console.log(TourPlans);
     return (
         <div className="container">
-            <div className="row g-5">
+            <div className="row g-5 mt-5">
                 {
                     TourPlans.map((service => <TourPlanContent service={service}>
                     </TourPlanContent>))

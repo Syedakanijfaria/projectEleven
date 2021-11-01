@@ -12,15 +12,14 @@ const TourPlanContent = (props) => {
     }
 
     return (
-        <div className="col-md-3">
+        <div className="col-md-4">
             <div className="card" style={{ "width": "18rem" }}>
                 <img src={image} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    {/* <p className="card-text">{description}</p> */}
                     {price}
                 </div>
-                <button onClick={() => handleDetails(_id)} className="btn btn-primary">See Details</button>
+                <button onClick={() => handleDetails(_id)} className="btn btn-danger">See Details</button>
             </div>
         </div>
     );

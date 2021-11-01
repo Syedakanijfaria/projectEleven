@@ -8,29 +8,22 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset } = useForm();
     const { id } = useParams()
     const [details, setDetails] = useState([])
-    // const [specificDetail, setSpecificDetail] = useState({})
+
     useEffect(() =>
         fetch(`https://morning-falls-44195.herokuapp.com/productTourPlans/${id}`)
             .then(res => res.json())
             .then(data => setDetails(data))
         , [id])
 
-    // useEffect(() => {
-    //     if (details.length > 0) {
-    //         const matchedData = details.find(detail => detail.key === id)
-    //         setSpecificDetail(matchedData);
-    //     }
-
-    // }, [details])
-
     const { user } = useAuth();
     const { displayName, email } = user;
 
-    const history = useHistory();
 
     const onSubmit = data => {
-        console.log(data);
-        axios.post('http://localhost:5000/users', data)
+        data.status = "Pending";
+        console.log("satus", data);
+
+        axios.post('https://morning-falls-44195.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     reset();
@@ -45,7 +38,6 @@ const PlaceOrder = () => {
                         <img src={details?.image} className="" alt="..." />
                     </div>
                     <div className="">
-                        {/* <h2> This is dynamic page and id is:{id}</h2> */}
                         <h5 className="">{details?.name}</h5>
                         <p className="">{details?.description}</p>
                         <p>Price:$ {details?.price}</p>
@@ -69,9 +61,6 @@ const PlaceOrder = () => {
                             <p>Departure Date: <input type="date" {...register("Date", { required: true })} placeholder="Departure Date" /></p><br />
                             <p>Mobile Number: <input type="Mobile number" {...register("Number", { required: true })} placeholder="Mobile Number" /></p><br />
                             <input type="submit" value="Book Now" />
-                            {/* <Link to="/myOrder">
-                                <input type="submit" value="Book Now" />
-                            </Link> */}
                         </form>
                     </div>
                 </div>

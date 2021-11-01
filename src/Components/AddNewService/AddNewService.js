@@ -13,7 +13,7 @@ const AddNewService = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/productTourPlans', data)
+        axios.post('https://morning-falls-44195.herokuapp.com/productTourPlans', data)
             .then(res => {
                 if (res.data.insertedId) {
                     reset();

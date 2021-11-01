@@ -18,7 +18,7 @@ import AddNewService from './Components/AddNewService/AddNewService.js';
 
 function App() {
   return (
-    <div>
+    <div class="app">
       <AuthProvider>
         <Router>
           <Header></Header>

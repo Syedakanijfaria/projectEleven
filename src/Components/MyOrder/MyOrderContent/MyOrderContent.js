@@ -8,12 +8,12 @@ const MyOrderContent = (props) => {
     const [users, setUsers] = useState([]);
     const [isDelete, setIsDelete] = useState({})
     useEffect(() =>
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://morning-falls-44195.herokuapp.com/${user.email}`)
             .then(res => res.json())
             .then(data => setUsers(data))
         , [email, isDelete]);
     const handleDelete = id => {
-        const url = `http://localhost:5000/users/${id}`;
+        const url = `https://morning-falls-44195.herokuapp.com/users/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

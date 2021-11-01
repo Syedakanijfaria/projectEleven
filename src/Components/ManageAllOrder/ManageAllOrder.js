@@ -5,7 +5,7 @@ const ManageAllOrder = () => {
     const [users, setUsers] = useState([])
     // const [specificDetail, setSpecificDetail] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/users`)
+        fetch(`https://morning-falls-44195.herokuapp.com/users`)
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [])
