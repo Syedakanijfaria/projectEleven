@@ -9,7 +9,7 @@ const TourPlans = () => {
             .then(res => res.json())
             .then(data => setTourPlans(data))
         , [])
-
+    console.log(TourPlans);
     return (
         <div className="container">
             <div className="row g-5">

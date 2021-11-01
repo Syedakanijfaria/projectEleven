@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import useAuth from '../../../Hooks/useAuth.js';
 
 const MyOrderContent = (props) => {
+    const { user } = useAuth();
+    const email = user.email;
     const { _id, Title, Name, Gender, Price, Email, Number, Date } = props.user || {};
     const [users, setUsers] = useState([]);
+    const [isDelete, setIsDelete] = useState({})
+    useEffect(() =>
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setUsers(data))
+        , [email, isDelete]);
     const handleDelete = id => {
         const url = `http://localhost:5000/users/${id}`;
         fetch(url, {
@@ -15,7 +24,8 @@ const MyOrderContent = (props) => {
                     alert('deleted successfully')
                     const remaining = users.filter(user => user._id !== id);
                     setUsers(remaining);
-                }
+                    setIsDelete(true);
+                } else { setIsDelete(false); }
             })
     }
     return (

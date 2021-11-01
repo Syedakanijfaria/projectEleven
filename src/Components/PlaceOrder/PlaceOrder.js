@@ -5,7 +5,7 @@ import useAuth from '../../Hooks/useAuth.js';
 import axios from 'axios';
 
 const PlaceOrder = () => {
-
+    const { register, handleSubmit, reset } = useForm();
     const { id } = useParams()
     const [details, setDetails] = useState([])
     // const [specificDetail, setSpecificDetail] = useState({})
@@ -25,7 +25,7 @@ const PlaceOrder = () => {
 
     const { user } = useAuth();
     const { displayName, email } = user;
-    const { register, handleSubmit, reset } = useForm();
+
     const history = useHistory();
 
     const onSubmit = data => {

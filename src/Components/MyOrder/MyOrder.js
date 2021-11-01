@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth.js';
-//import { useParams, useHistory } from 'react-router-dom';
 import MyOrderContent from './MyOrderContent/MyOrderContent.js';
 
 const MyOrder = () => {
