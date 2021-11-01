@@ -25,8 +25,8 @@ const Footer = () => {
                     <div className="col-md-3">
                         <div className="firstmiddle-container">
                             <h3>Contact Us</h3>
-                            <p className="footer-menu"><i className="fas fa-paper-plane"></i> powergymnster@email.com</p>
-                            <p className="footer-menu"><i className="fas fa-reply"></i> powergymnster@info.com</p>
+                            <p className="footer-menu"><i className="fas fa-paper-plane"></i> extremetraveller@email.com</p>
+                            <p className="footer-menu"><i className="fas fa-reply"></i> extremetraveller@info.com</p>
                             <p className="footer-menu"><i className="fas fa-tty"></i> +299 97 39 82 , 01737625446</p>
 
                             <p className="footer-menu"><i className="fas fa-map-marker-alt"></i> 76 Road Uttara, Dhaka, Bangladesh</p>
@@ -39,8 +39,9 @@ const Footer = () => {
                             <h3 className="">Links</h3>
                             <ul>
                                 <li className="footer-menu">Home</li>
-                                <li className="footer-menu">Services</li>
-                                <li className="footer-menu">Package</li>
+                                <li className="footer-menu">My Order</li>
+                                <li className="footer-menu">Manage All Order</li>
+                                <li className="footer-menu">Add New Service</li>
                                 <li className="footer-menu"> Login</li>
                             </ul>
                         </div>
@@ -57,7 +58,7 @@ const Footer = () => {
                     <hr></hr>
                     {/* social links */}
                     <div className="text-center">
-                        <p><small>©2021 POWER GYMNSTER. All rights reserved</small></p>
+                        <p><small>©2021 Extreme Traveller. All rights reserved</small></p>
                     </div>
                 </div>
             </div >
