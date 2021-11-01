@@ -5,7 +5,6 @@ import MyOrderContent from './MyOrderContent/MyOrderContent.js';
 const MyOrder = () => {
     const { user } = useAuth();
     const [users, setUsers] = useState([]);
-    // const [specificDetail, setSpecificDetail] = useState({})
     useEffect(() =>
         fetch(`https://morning-falls-44195.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
@@ -13,7 +12,7 @@ const MyOrder = () => {
         , [])
     return (
         <div className="container">
-            <h1>this is order review</h1>
+            {/* <h1>this is order review</h1> */}
             <div>
                 {
                     users.map((user => <MyOrderContent user={user}></MyOrderContent>))

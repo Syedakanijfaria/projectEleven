@@ -3,13 +3,11 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header/Header.js';
 import Home from './Components/Home/Home.js';
-import Offers from './Components/Offers/Offers.js';
 import Login from './Components/Login/Login.js';
 import NotFound from './Components/NotFound/NotFound.js';
 import Footer from './Components/Footer/Footer.js';
 import AuthProvider from './Context/AuthProvider.js';
 import Register from './Components/Register/Register.js';
-
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute.js';
 import PlaceOrder from './Components/PlaceOrder/PlaceOrder.js';
 import MyOrder from './Components/MyOrder/MyOrder.js';
@@ -18,7 +16,7 @@ import AddNewService from './Components/AddNewService/AddNewService.js';
 
 function App() {
   return (
-    <div class="app">
+    <div className="app">
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -41,9 +39,6 @@ function App() {
             <PrivateRoute exact path="/addNewService">
               <AddNewService></AddNewService>
             </PrivateRoute>
-            <Route path="/offers">
-              <Offers></Offers>
-            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>

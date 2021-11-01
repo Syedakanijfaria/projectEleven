@@ -21,7 +21,7 @@ const PlaceOrder = () => {
 
     const onSubmit = data => {
         data.status = "Pending";
-        console.log("satus", data);
+        console.log("status", data);
 
         axios.post('https://morning-falls-44195.herokuapp.com/users', data)
             .then(res => {
@@ -59,6 +59,7 @@ const PlaceOrder = () => {
                             <p>Mail:<input type="email" {...register("Email")} defaultValue={email} /></p><br />
                             <p>Price: $<input type="number" {...register("Price", { required: true })} /></p><br />
                             <p>Departure Date: <input type="date" {...register("Date", { required: true })} placeholder="Departure Date" /></p><br />
+                            <p>Address: <input type="address" {...register("Address", { required: true })} placeholder="Address" /></p><br />
                             <p>Mobile Number: <input type="Mobile number" {...register("Number", { required: true })} placeholder="Mobile Number" /></p><br />
                             <input type="submit" value="Book Now" />
                         </form>

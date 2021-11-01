@@ -16,8 +16,9 @@ const TourPlanContent = (props) => {
             <div className="card" style={{ "width": "18rem" }}>
                 <img src={image} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    {price}
+                    <h4>{name}</h4>
+                    <h5>Price: {price}</h5>
+                    <h5>Description:</h5> {description}
                 </div>
                 <button onClick={() => handleDetails(_id)} className="btn btn-danger">See Details</button>
             </div>
