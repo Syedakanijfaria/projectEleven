@@ -16,7 +16,7 @@ const Header = () => {
                     </button>
                     <p className="navbar-brand">
                         <img src={logo} alt="" className="d-inline-block align-text-top" />
-                        Extreme Traveler</p>
+                        Extreme Traveler Check</p>
                     <div className="collapse navbar-collapse " id="navbarTogglerDemo03">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
                             <li className="nav-item m-2 p-2 text-decoration-none">

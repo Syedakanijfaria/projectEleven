@@ -12,22 +12,27 @@ const MyOrderContent = (props) => {
             .then(res => res.json())
             .then(data => setUsers(data))
         , [email, isDelete]);
+
     const handleDelete = id => {
-        const url = `https://morning-falls-44195.herokuapp.com/users/${id}`;
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount) {
-                    alert('deleted successfully')
-                    const remaining = users.filter(user => user._id !== id);
-                    setUsers(remaining);
-                    setIsDelete(true);
-                } else { setIsDelete(false); }
+        const proceed = window.confirm('Are you sure, you want to delete it?');
+        if (proceed) {
+            const url = `https://morning-falls-44195.herokuapp.com/users/${id}`;
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        alert('deleted successfully')
+                        const remaining = users.filter(user => user._id !== id);
+                        setUsers(remaining);
+                        setIsDelete(true);
+                    } else { setIsDelete(false); }
+                })
+        }
     }
+
     return (
         <div className="col-md-3">
             <div className="card" style={{ "width": "18rem" }}>

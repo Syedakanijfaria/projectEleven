@@ -21,5 +21,4 @@ const TourPlans = () => {
         </div>
     );
 };
-
 export default TourPlans;
